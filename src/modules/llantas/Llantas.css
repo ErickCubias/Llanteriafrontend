@@ -1,0 +1,448 @@
+/* Llantas Catalog Page */
+
+.llantas-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+/* HERO SECTION */
+.catalog-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+}
+
+.catalog-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* MAIN CONTAINER */
+.catalog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* FILTERS SECTION (FULL WIDTH) */
+.catalog-filters {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  border: 2px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 0;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 0.8rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+.search-input-wrapper i {
+  position: absolute;
+  left: 1rem;
+  color: #667eea;
+  font-size: 0.9rem;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 0.8rem;
+  font-size: 0.95rem;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+.filter-select option {
+  background: white;
+  color: #333;
+}
+
+.filter-reset {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  max-width: 250px;
+}
+
+.filter-reset:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* RESULTS SECTION */
+.catalog-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-count {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* GRID */
+.llantas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARD */
+.llanta-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.llanta-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+  transform: translateY(-8px);
+}
+
+.llanta-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.llanta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.llanta-card:hover .llanta-image img {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #667eea;
+  opacity: 0.3;
+}
+
+.llanta-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.llanta-marca {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #667eea;
+  margin: 0 0 0.3rem 0;
+}
+
+.llanta-modelo {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 1rem 0;
+}
+
+.spec-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.spec-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.2);
+}
+
+.llanta-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.detail-item {
+  font-size: 0.85rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.detail-item i {
+  color: #667eea;
+  width: 16px;
+}
+
+.llanta-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
+}
+
+.price-section {
+  flex: 1;
+}
+
+.price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #667eea;
+}
+
+.btn-detalles {
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-detalles:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* LOADING */
+.loading-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  border: 2px dashed #e9ecef;
+}
+
+.loading-container i {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.loading-container p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 1rem;
+  border: 2px dashed #e9ecef;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  display: block;
+  opacity: 0.6;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .catalog-container {
+    padding: 2rem 1rem;
+  }
+
+  .llantas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .catalog-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .llantas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .llanta-image {
+    height: 150px;
+  }
+
+  .llanta-info {
+    padding: 1rem;
+  }
+
+  .llanta-marca {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .btn-detalles {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .catalog-hero {
+    padding: 2rem 1rem;
+  }
+
+  .catalog-title {
+    font-size: 1.5rem;
+  }
+
+  .catalog-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .llantas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-filters {
+    padding: 1.5rem;
+  }
+
+  .filter-group {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

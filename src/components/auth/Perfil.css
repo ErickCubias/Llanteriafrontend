@@ -1,0 +1,229 @@
+.perfil-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  padding: 40px 20px;
+}
+
+.perfil-container .alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 16px 20px;
+  margin-bottom: 25px;
+}
+
+.perfil-container .alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.perfil-container .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.perfil-container .alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.perfil-container .alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+.perfil-container h2 {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 32px;
+}
+
+.perfil-container .card {
+  border: none;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  padding: 25px !important;
+}
+
+.perfil-container .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.perfil-container .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-container .card p {
+  margin-bottom: 14px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.perfil-container .card strong {
+  color: #333;
+  font-weight: 700;
+}
+
+.perfil-container .badge {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.perfil-container .btn {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  padding: 8px 16px;
+}
+
+.perfil-container .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.perfil-container .btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.perfil-container .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.perfil-container .btn-success:hover {
+  background-color: #218838;
+  border-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.perfil-container .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.perfil-container .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.perfil-container .btn-outline-primary {
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.perfil-container .btn-outline-primary:hover:not(:disabled) {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.perfil-container .btn-outline-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: #999;
+  border-color: #ccc;
+}
+
+.perfil-container .btn-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 0;
+}
+
+.perfil-container .btn-link:hover {
+  text-decoration: underline;
+}
+
+.perfil-container .list-group-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  padding: 15px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.perfil-container .list-group-item:hover {
+  background: #f0f0f0;
+  border-color: #28a745;
+  border-left: 4px solid #28a745;
+}
+
+.perfil-container .list-group-item p {
+  margin-bottom: 8px;
+}
+
+.perfil-container .list-group-item:last-child {
+  margin-bottom: 0;
+}
+
+.perfil-container .list-group-flush {
+  border-radius: 0;
+}
+
+.perfil-container .text-muted {
+  color: #999 !important;
+  font-size: 13px;
+}
+
+.perfil-container .gap-2 {
+  gap: 10px !important;
+}
+
+@media (max-width: 768px) {
+  .perfil-container {
+    padding: 20px 10px;
+  }
+
+  .perfil-container h2 {
+    font-size: 24px;
+  }
+
+  .perfil-container .card {
+    margin-bottom: 20px;
+  }
+
+  .perfil-container .row {
+    flex-direction: column;
+  }
+
+  .perfil-container .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .perfil-container .d-flex {
+    flex-direction: column;
+  }
+
+  .perfil-container .btn {
+    width: 100%;
+  }
+}

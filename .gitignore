@@ -1,0 +1,21 @@
+# Laravel
+/vendor
+/.env
+/storage/*.key
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+
+# Node (React)
+node_modules/
+dist/
+.env.local
+
+# Docker
+dbdata/
+*.log
+
+# General
+.DS_Store
+*.sqlite
