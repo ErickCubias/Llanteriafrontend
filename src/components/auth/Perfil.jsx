@@ -25,7 +25,7 @@ export default function Perfil() {
       setMessage('✅ Sesión activa');
       setMessageType('success');
       // Cargar datos del perfil del backend
-      axios.get('http://localhost:3000/api/perfil', {
+      axios.get('https://llanteriabackend-production.up.railway.app/api/perfil', {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(res => {
@@ -38,8 +38,8 @@ export default function Perfil() {
   }, [user, navigate, token]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/marcas').then(res => setMarcas(res.data));
-    axios.get('http://localhost:3000/api/modelos').then(res => setModelos(res.data));
+    axios.get('https://llanteriabackend-production.up.railway.app/api/marcas').then(res => setMarcas(res.data));
+    axios.get('https://llanteriabackend-production.up.railway.app/api/modelos').then(res => setModelos(res.data));
   }, []);
 
   const getMarca = (id) => marcas.find(m => m.id === id)?.NOMBRE || id;
@@ -47,7 +47,7 @@ export default function Perfil() {
 
   const handleAddVehiculo = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/vehiculos', data, {
+      const response = await axios.post('https://llanteriabackend-production.up.railway.app/api/vehiculos', data, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setVehiculos([...vehiculos, response.data]);
@@ -63,7 +63,7 @@ export default function Perfil() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:3000/api/logout', {}, {
+      await axios.post('https://llanteriabackend-production.up.railway.app/api/logout', {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('👋 ¡Has salido de sesión con éxito!');

@@ -49,9 +49,10 @@ export default function RegisterForm() {
     }
 
     Promise.all([
-      axios.get('http://localhost:3000/api/marcas'),
-      axios.get('http://localhost:3000/api/modelos')
+      axios.get('https://llanteriabackend-production.up.railway.app/api/marcas'),
+      axios.get('https://llanteriabackend-production.up.railway.app/api/modelos')
     ])
+    
       .then(([resMarcas, resModelos]) => {
         setMarcas(resMarcas.data);
         setModelos(resModelos.data);
